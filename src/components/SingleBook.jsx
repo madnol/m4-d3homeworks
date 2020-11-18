@@ -5,7 +5,7 @@ import { Card, Button } from "react-bootstrap";
 // let book = props.book
 
 const SingleBook = props => {
-  const { img, title, description } = props.book;
+  const { img, title, price } = props.book;
 
   return (
     <Card className={"mx-auto my-4"} style={{ width: "18rem" }}>
@@ -16,7 +16,7 @@ const SingleBook = props => {
       />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
-        <Card.Text>{description}</Card.Text>
+        <Card.Text>$ {price}</Card.Text>
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
     </Card>

@@ -20,9 +20,11 @@ class BookList extends React.Component {
         <input type="text" onChange={this.handleFilterChange} />
         <Row>
           {fantasyBooks
-            .filter(pippo => pippo.title.includes(this.state.query))
-            .map(pippo => (
-              <SingleBook book={pippo} />
+            .filter(book =>
+              book.title.toLowerCase().includes(this.state.query.toLowerCase())
+            )
+            .map(book => (
+              <SingleBook book={book} />
             ))}
         </Row>
       </>
