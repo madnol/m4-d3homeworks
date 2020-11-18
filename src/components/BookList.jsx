@@ -1,4 +1,4 @@
-import { Row } from "react-bootstrap";
+import { Row, InputGroup, FormControl } from "react-bootstrap";
 import React from "react";
 import SingleBook from "./SingleBook";
 import fantasyBooks from "../data/fantasy.json";
@@ -17,7 +17,14 @@ class BookList extends React.Component {
   render(props) {
     return (
       <>
-        <input type="text" onChange={this.handleFilterChange} />
+        <InputGroup className="mb-3">
+          <InputGroup.Prepend></InputGroup.Prepend>
+          <FormControl
+            aria-describedby="basic-addon1"
+            placeholder="Search Books by Title"
+            onChange={this.handleFilterChange}
+          />
+        </InputGroup>
         <Row>
           {fantasyBooks
             .filter(book =>
