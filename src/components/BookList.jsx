@@ -25,6 +25,7 @@ class BookList extends React.Component {
             onChange={this.handleFilterChange}
           />
         </InputGroup>
+
         <Row>
           {fantasyBooks
             .filter(book =>
